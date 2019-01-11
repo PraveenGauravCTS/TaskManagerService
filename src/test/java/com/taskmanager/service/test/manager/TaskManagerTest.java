@@ -33,7 +33,6 @@ public class TaskManagerTest {
 		Task task = new Task();
 		task.setEndDate(new Date());
 		task.setStartDate(new Date());
-		task.setStatus(ServiceConstant.STATUS_COMPLETED);
 		Mockito.when(taskRepository.findOne(3)).thenReturn(task);
 		assertNotNull(taskManager.getTaskById(3));
 	}
@@ -47,7 +46,6 @@ public class TaskManagerTest {
 		Task task = new Task();
 		task.setEndDate(new Date());
 		task.setStartDate(new Date());
-		task.setStatus(ServiceConstant.STATUS_COMPLETED);
 		ArrayList<Task> tasks = new ArrayList<>();
 		tasks.add(task);
 

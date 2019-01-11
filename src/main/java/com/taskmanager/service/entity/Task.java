@@ -29,11 +29,8 @@ public class Task {
 	@NotFound(action=NotFoundAction.IGNORE)    
 	private ParentTask parentTask;
 
-	@Column(name = "TASK_DESC", length = 25)
+	@Column(name = "TASK", length = 25)
 	private String task;
-
-	@Column(name = "STATUS", length = 25)
-	private String status;
 
 	@Column(name = "PRIORITY", length = 25)
 	private String priority;
@@ -64,13 +61,6 @@ public class Task {
 		this.task = task;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
 
 	public String getPriority() {
 		return priority;
